@@ -66,7 +66,7 @@ function klik(num) {
 
 	if(binary.length == 264)
 		//call sha256 here:
-		seed.push("\n     +checksum:)");
+		seed.push("+checksum:)");
 		
 	document.getElementById("seed").value = seed;
 	
