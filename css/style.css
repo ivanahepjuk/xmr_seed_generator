@@ -33,9 +33,8 @@ h2	{
 
 textarea {
 	background-color: #141414;
-	width: 47%;
-  height: 140px;
-  margin-top: 14px; 
+    height: 140px;
+    margin-top: 14px; 
 	margin-left: 0px;
 	color: white;
 	background-color: #000;
@@ -44,22 +43,29 @@ textarea {
 }
 
 
-.blocek {
+.center {
 	margin-left: 5%;
 	margin-right: 5%;
 	text-align: center;
 }
 
+.blocek {
+	width: 47%;
+}
+
 .white {
-	margin-left: 24.5%;
+	/*margin-left: 24.5%;
 	margin-right: 24.5%;
+	*/
+	height: 5px;
 	color:#000!important;
 	background-color:#fff!important
 }
 
 .grey {
+	height: 5px;
 	color:#fff!important;
-	background-color:#616161!important
-	height: 7px; 
-	width: 0;
+	background-color:#3344cc!important;
+	width: 0%;
+	
 }
