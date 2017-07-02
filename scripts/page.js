@@ -98,7 +98,7 @@ function klik(num) {
 			decimal_number += 0;
 
 		console.log(decimal_number);
-		document.getElementById("progressbar").width = decimal_number/20;
+		document.getElementById("progressbar").style.width = decimal_number/20;
 
 		//VISUAL HACK :OOO
 		if(decimal_number >1620)
