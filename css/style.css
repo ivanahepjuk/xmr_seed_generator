@@ -15,7 +15,7 @@ p {
 }
 
 img {
-	padding-top: 21px;
+	padding-top: 0px;
 }
 
 
@@ -30,12 +30,12 @@ h2	{
 	background-color: #000;
 	border: none;
     color: white;
-    padding: 15px 21px;
-    text-align: left;
+    padding: 3px 3px;
+   /*text-align: left;*/
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 4px;
+    font-size: 14px;
+    margin: 0px 0px;
     cursor: crosshair;
 }
 
@@ -43,10 +43,10 @@ h2	{
 textarea {
 	text-transform: uppercase;
 	width: 70%;
-    height: 140px;
+    height: 42px;
     margin-top: 14px; 
 	margin-left: 0px;
-	color: white;
+	color: #4c4c4c;
 	background-color: #000;
 	padding: 1.5%;
 	border: 0;
@@ -59,22 +59,19 @@ textarea {
 	text-align: center;
 }
 
-.blocek {
-	;
-}
 
 .bar {
 	
 	width: 73%;
 	height: 2px;
-	color:#000!important;
+/*	color:#000!important;*/
 	background-color:#000!important
 }
 
 .progress {
 	
 	height: 2px;
-	color:#fff!important;
+/*	color:#fff!important;*/
 	background-color:#ff6600!important;
 	width: 0%;
 	
