@@ -1,8 +1,9 @@
-//alert("hohoohohohh");
+/*
+Created by ivanahepjuk@gmail.com
+		in Adrspach 2017
+*/
 
 var binary = "";
-
-
 
 function klik(num) {
 
@@ -17,10 +18,6 @@ function klik(num) {
 		binary += "10";
 	if (num === 4)
 		binary += "11";
-	if (num === 5)
-		binary += "0";
-	if (num === 6)
-		binary += "1";
 
 	//This ensures that collected bits will be cutted off above 256'th bit
 	if(binary.length > 264)
@@ -31,7 +28,7 @@ function klik(num) {
 	document.getElementById("binary").value=binary;
 
 	//setting the progressbar
-	var progressbarsetting = "width: " + ((100 * binary.length) / 256) + "%";
+	var progressbarsetting = "width: " + ((100 * binary.length) / 264) + "%";
 	document.getElementById("progressbar").setAttribute("style", progressbarsetting);
 
 
@@ -53,7 +50,6 @@ function klik(num) {
 			/*else if (chunk[i] === "0")	
 				decimal_number += 0;*/
 		}
-
 	
 		//VISUAL HACK :OOO
 		if(decimal_number >1620)
@@ -61,7 +57,6 @@ function klik(num) {
 
 		seed.push(wordlist_en[decimal_number]);
 		console.log(seed);
-
 	}
 
 	if(binary.length == 264)

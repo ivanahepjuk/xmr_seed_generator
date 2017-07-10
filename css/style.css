@@ -1,3 +1,8 @@
+/*
+Created by ivanahepjuk@gmail.com
+		in Adrspach 2017
+*/
+
 body {
 
 	background-color: #141414;
@@ -14,16 +19,32 @@ p {
 	color: #4c4c4c;
 }
 
-img {
-	padding-top: 0px;
+a {
+	cursor: crosshair;
 }
 
+img {
+	padding-top: 0px;
+	cursor: crosshair;
+}
 
 h2	{
 	font-size: 21px;
-	text-transform: uppercase;
 	text-align: center;
 	color: #ccc;
+}
+
+textarea {
+	text-transform: uppercase;
+	width: 70%;
+    height: 42px;
+    margin-top: 14px; 
+	margin-left: 0px;
+	color: #4c4c4c;
+	background-color: #000;
+	padding: 1.5%;
+	border: 0;
+	/*ddd*/
 }
 
 .button {
@@ -39,26 +60,13 @@ h2	{
     cursor: crosshair;
 }
 
-
-textarea {
-	text-transform: uppercase;
-	width: 70%;
-    height: 42px;
-    margin-top: 14px; 
-	margin-left: 0px;
-	color: #4c4c4c;
-	background-color: #000;
-	padding: 1.5%;
-	border: 0;
-}
-
-
 .center {
+	/*padding-top: 35px;
+	background-color: #66ff00;*/
 	margin-left: 5%;
 	margin-right: 5%;
 	text-align: center;
 }
-
 
 .bar {
 	
