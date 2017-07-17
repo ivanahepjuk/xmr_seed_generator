@@ -3,37 +3,68 @@ Created by ivanahepjuk@gmail.com
 		in Adrspach 2017
 */
 
-var binary = "";
+
+var hexa = "";
 
 function klik(num) {
 
 	//it's necesarry to empty the "seed", so it can be at the end of the function created again.
 	var seed = [];
+	var hexa_dec = 0;
+	var binary = "";
 
 	if (num === 1) 
-		binary += "00";
+		hexa += "0";
 	if (num === 2)
-		binary += "01";
+		hexa += "1";
 	if (num === 3)
-		binary += "10";
+		hexa += "2";
 	if (num === 4)
-		binary += "11";
+		hexa += "3";
+	if (num === 5)
+		hexa += "4";
+	if (num === 6)
+		hexa += "5";
 
-	//This ensures that collected bits will be cutted off above 256'th bit
-	if(binary.length > 264)
-		binary = binary.substring(0, 264);
+	//This ensures that collected bits will be cutted off above x'th bit
+	//if(hexa.length > 84)
+	//	hexa = hexa.substring(0, 84);
 
 
-	//shows the binary seed in 1's and 0's, because "Such Wow Effect"
-	document.getElementById("binary").value=binary;
+	////////////////////////////
+	//converting string from "hexa based" to decimal
+	for (var k = (hexa.length -1); k >= 0 ; k--) {
+		hexa_dec += hexa[k] * (6 **(k));
+	}
 
-	//setting the progressbar
-	var progressbarsetting = "width: " + ((100 * binary.length) / 264) + "%";
-	document.getElementById("progressbar").setAttribute("style", progressbarsetting);
+	///////////////////////////
+
+	////////////////////////////
+	//converting from decimal to binary
+	var X = hexa_dec;
+	while(X != 0){
+		binary += (X%2)
+		X = Math.floor(X/2);
+	}
+
+	///////////////////////////	
+	
 
 
 	//calculating the seed starts from here:
 	//how many 11-bit (words_count) elements are there in currrent bit combination?
+
+	document.getElementById("hexa").value=hexa;
+
+	//setting the progressbar
+	var progressbarsetting = "width: " + ((100 * hexa.length) / 84) + "%";
+	document.getElementById("progressbar").setAttribute("style", progressbarsetting);
+
+	document.getElementById("binary").value=binary;
+	//shows the hexa seed in 0-5's, because "Such Wow Effect"
+
+
+
 	var words_count = ((binary.length - (binary.length % 11)) / 11);
 
 	
