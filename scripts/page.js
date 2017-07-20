@@ -46,20 +46,29 @@ function klik(num) {
 	Na tom pochopis jak to funguje.
 	*/
 
-
-
-
-
-
-	
-	
-
+    hexadec = hexal2hxd(hexa)
+    console.log(hexadec);
 
 
 	//tohle s "nelogickym" pouzitim promenne hexa je tady proto, aby si po peti kliknutich videl ze to funguje a lepe se zorientoval
 	//v tom jak to myslim
 	if(hexa.length >= 5)
 		document.getElementById("seed").value = mn_encode('41a80cd3707c6b8e015c95bbe73f2461de407ba5677cbd205d528a6eb89d7e0d', 'english');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 	//A tohle tady bude, az vyresis ten hexadecimal string,)
@@ -75,3 +84,20 @@ function klik(num) {
 	
 }
 
+// addapted from
+// https://stackoverflow.com/questions/18626844/convert-a-large-integer-to-a-hex-string-in-javascript
+function hexal2hxd(str){ // .toString(16) only works up to 2^53
+    var hexal = str.toString().split(''), sum = [], hxd = [], i, s
+    while(hexal.length){
+        s = 1 * hexal.shift()
+        for(i = 0; s || i < sum.length; i++){
+            s += (sum[i] || 0) * 6
+            sum[i] = s % 16
+            s = (s - sum[i]) / 16
+        }
+    }
+    while(sum.length){
+        hxd.push(sum.pop().toString(16))
+    }
+    return hxd.join('')
+}
