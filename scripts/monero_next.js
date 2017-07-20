@@ -1,3 +1,9 @@
+//var str="41a80cd3707c6b8e015c95bbe73f2461de407ba5677cbd205d528a6eb89d7e0d";
+
+//nazacatek!!! nacte se verze mnemonic words
+window.onload = function(){
+    mnDictTag = document.getElementById('mnDict');
+}
 
 function mn_encode(str, wordset_name) {
     'use strict';
@@ -18,5 +24,27 @@ function mn_encode(str, wordset_name) {
     if (wordset.prefix_len > 0) {
         out.push(out[mn_get_checksum_index(out, wordset.prefix_len)]);
     }
+
+    ////
+
+    document.getElementById("binary").value=out;
+    ////
     return out.join(' ');
+}
+
+function mn_swap_endian_4byte(str) {
+    'use strict';
+    if (str.length !== 8) throw 'Invalid input length: ' + str.length;
+    return str.slice(6, 8) + str.slice(4, 6) + str.slice(2, 4) + str.slice(0, 2);
+}
+
+
+function mn_get_checksum_index(words, prefix_len) {
+    var trimmed_words = "";
+    for (var i = 0; i < words.length; i++) {
+        trimmed_words += words[i].slice(0, prefix_len);
+    }
+    var checksum = crc32.run(trimmed_words);
+    var index = checksum % words.length;
+    return index;
 }

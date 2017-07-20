@@ -8,7 +8,9 @@ Created by ivanahepjuk@gmail.com
 <head>
 	<title>MONERO SEED GENERATOR</title>
 	<script type="text/javascript" src="scripts/page.js"></script>
-		<script type="text/javascript" src="scripts/monero_mnemonic_english_wordlist.js"></script>
+    <script type="text/javascript" src="scripts/monero_mnemonic_english_wordlist.js"></script>
+    <script type="text/javascript" src="scripts/crc32.js"></script>
+	<script type="text/javascript" src="scripts/monero_next.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style type="text/css">
 
@@ -30,8 +32,17 @@ Created by ivanahepjuk@gmail.com
 		<img src="img/3.png" onclick="klik(3)">
 		<img src="img/4.png" onclick="klik(4)">
 		<img src="img/5.png" onclick="klik(5)">
-		<img src="img/6.png" onclick="klik(6)">
-		
+		<img src="img/6.png" onclick="mn_encode('41a80cd3707c6b8e015c95bbe73f2461de407ba5677cbd205d528a6eb89d7e0d', 'english')">
+
+	</div>
+	<div class="center">
+		<label for="mnDict">Mnemonic Dictionary</label>
+			<select id="mnDict">
+				<option value="english">English (Monero default)</option>
+				<option value="spanish">Spanish</option>
+				<option value="portuguese">Portuguese</option>
+				<option value="japanese">Japanese</option>
+			</select>
 	</div>
 </div>
 
@@ -45,7 +56,7 @@ Created by ivanahepjuk@gmail.com
 			<div id="progressbar" class="progress"></div>
 		</div>
 		
-		<textarea type="text" id="binary" name="seed" value="binary sequence:"></textarea>
+			<textarea type="text" id="binary" name="seed" value="binary sequence:"></textarea>
 
 		<!--   textarea final seed wordds    -->
 		<textarea type="text" id="seed" name="seed" value="seed:"></textarea>

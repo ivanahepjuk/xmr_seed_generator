@@ -33,7 +33,7 @@ function klik(num) {
 
 	////////////////////////////
 	//converting string from "hexa based" to decimal
-	for (var k = (hexa.length -1); k >= 0 ; k--) {
+	for (var k = 0; k < hexa.length ; k++) {
 		hexa_dec += hexa[k] * (6 **(k));
 	}
 
