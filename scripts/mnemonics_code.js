@@ -2,7 +2,9 @@
 
 //nazacatek!!! nacte se verze mnemonic words
 window.onload = function(){
+    //ulozi tag tohho scroll listu
     mnDictTag = document.getElementById('mnDict');
+
 }
 
 function mn_encode(str, wordset_name) {
@@ -27,7 +29,7 @@ function mn_encode(str, wordset_name) {
 
     ////
 
-    document.getElementById("binary").value=out;
+    //document.getElementById("binary").value=out;
     ////
     return out.join(' ');
 }

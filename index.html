@@ -10,7 +10,7 @@ Created by ivanahepjuk@gmail.com
 	<script type="text/javascript" src="scripts/page.js"></script>
     <script type="text/javascript" src="scripts/monero_mnemonic_english_wordlist.js"></script>
     <script type="text/javascript" src="scripts/crc32.js"></script>
-	<script type="text/javascript" src="scripts/monero_next.js"></script>
+	<script type="text/javascript" src="scripts/mnemonics_code.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style type="text/css">
 
@@ -32,9 +32,15 @@ Created by ivanahepjuk@gmail.com
 		<img src="img/3.png" onclick="klik(3)">
 		<img src="img/4.png" onclick="klik(4)">
 		<img src="img/5.png" onclick="klik(5)">
-		<img src="img/6.png" onclick="mn_encode('41a80cd3707c6b8e015c95bbe73f2461de407ba5677cbd205d528a6eb89d7e0d', 'english')">
+		<img src="img/6.png" onclick="klik(6)">
 
 	</div>
+
+
+
+<!--   prevzato z https://xmr.llcoins.net/addresstests.html, ve finalni verzi bych taky rad vybiral z vice jazyku seedu,
+ale ted to tady nema smysl resit..
+
 	<div class="center">
 		<label for="mnDict">Mnemonic Dictionary</label>
 			<select id="mnDict">
@@ -44,28 +50,30 @@ Created by ivanahepjuk@gmail.com
 				<option value="japanese">Japanese</option>
 			</select>
 	</div>
+-->
+
+
 </div>
 
 <div class="center">
 	<!--   textarea binary seed   -->
 	
-		<textarea type="text" id="hexa" name="seed" value="hexa sequence:"></textarea>
+		<textarea type="text" id="hexa"  value="hexa sequence:" placeholder="throw your dice repeatedly"></textarea>
 		<!--   progressbar   -->
 		
 		<div class="bar" id="inner">
 			<div id="progressbar" class="progress"></div>
 		</div>
 		
-			<textarea type="text" id="binary" name="seed" value="binary sequence:"></textarea>
 
 		<!--   textarea final seed wordds    -->
-		<textarea type="text" id="seed" name="seed" value="seed:"></textarea>
+		<textarea type="text" id="seed" name="seed" placeholder="seed will appear here after sufficient number of throws"></textarea>
 		
 </div>
 
 <footer>
 	<div class="center">
-		<p>created by ivanahepjuk 2017</p>
+		<!--<p>created by ivanahepjuk 2017</p>-->
 	</div>
 </footer>
 
