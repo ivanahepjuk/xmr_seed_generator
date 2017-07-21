@@ -23,8 +23,8 @@ function klik(num) {
 	document.getElementById("hexa").value=hexal;
 
 	if (hexal.length >= 100){		
-		hexal = hexal.substring(0,100);	
-		document.getElementById("seed").value = mn_encode(hexal2hxd(hexal), 'english');
+		hexadec = hexal2hxd(hexal).substring(0,64);	
+		document.getElementById("seed").value = mn_encode(hexadec, 'english');
 	}
 
 	//setting the progressbar NEMAZAT	
