@@ -9,7 +9,7 @@ body {
 	font-family: "Monospace", Courier-new;
 	font-size: 14px;
 	color: #333	;
-	background-image: url("img/background.png");
+	/*background-image: url("img/background.png");*/
 }
 
 p {
@@ -21,6 +21,14 @@ p {
 
 a {
 	cursor: crosshair;
+
+
+
+	font-size: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #4c4c4c;
+	text-decoration: none;
 }
 
 img {

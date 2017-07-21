@@ -3,33 +3,37 @@ Created by ivanahepjuk@gmail.com
 */
 
 var hexal = "";
-//var hexadecimal = "";
+var done = false;
+var hexadecimal = "";
 
-function klik(num) {
+function dice_throwed(num) {
+	if(!done){
+		if (num === 1) 
+			hexal += "0";
+		if (num === 2)
+			hexal += "1";
+		if (num === 3)
+			hexal += "2";
+		if (num === 4)
+			hexal += "3";
+		if (num === 5)
+			hexal += "4";
+		if (num === 6)
+			hexal += "5";
 
-	if (num === 1) 
-		hexal += "0";
-	if (num === 2)
-		hexal += "1";
-	if (num === 3)
-		hexal += "2";
-	if (num === 4)
-		hexal += "3";
-	if (num === 5)
-		hexal += "4";
-	if (num === 6)
-		hexal += "5";
+		document.getElementById("hexa").value=hexal;
 
-	document.getElementById("hexa").value=hexal;
+		hexadecimal = hexal2hxd(hexal);
 
-	if (hexal.length >= 100){		
-		hexadec = hexal2hxd(hexal).substring(0,64);	
-		document.getElementById("seed").value = mn_encode(hexadec, 'english');
+		if (hexadecimal.length >= 64){	
+			done = true;	
+			document.getElementById("seed").value = mn_encode(hexadecimal, 'english');
+		}
+
+		//setting the progressbar NEMAZAT	
+		var progressbarsetting = "width: " + (100*hexadecimal.length/64) + "%";
+		document.getElementById("progressbar").setAttribute("style", progressbarsetting);
 	}
-
-	//setting the progressbar NEMAZAT	
-	//var progressbarsetting = "width: " + (hexal.length) + "%";
-	//document.getElementById("progressbar").setAttribute("style", progressbarsetting);
 }
 
 // adapted from
