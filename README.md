@@ -1,6 +1,7 @@
-# xmr_seed_generator
+# xmr_seed_generator (used code from https://xmr.llcoins.net/addresstests.html)
 
 This is XMR SEED DICE GENERATOR web page.
+
 
 In the cryptocurrency space, generating truly random number is one of the most important thing, 
 which protects your funds from stealing. There are many ways how to generate random number, vast majority 
